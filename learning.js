@@ -17,3 +17,4 @@ let secondName; // Undefined default
 let selectedColor = null // redefine a value
  // null = resettable
  // so, what's on front of a variable defines it
+// javascript is dynamic 
