@@ -44,13 +44,14 @@ console.log(friend);
 
 //create functions (extructure): Verb + Substantive
 
-let siteColor = "blue";
+let siteColor = "azul";
 
-function resetColor(hue, color){ //() <- parameters
-    siteColor = hue + color; // concatenates
+function resetColor(){ //() <- parameters
+    siteColor = ""; //resets value
 }; //function end with ;
 
 console.log(siteColor);
+<<<<<<< HEAD
 resetColor("bright"," red"); // only with red -> redundefined
 console.log(siteColor);
 
@@ -73,3 +74,7 @@ console.log(multiplyByTwo(7)); //we used console.log because the function multip
 let result = multiplyByTwo(12);
 
 console.log(result);
+=======
+resetColor();
+console.log(siteColor);
+>>>>>>> 385e33f281a1f7d1f0819e06947a5ed98610cc9e
