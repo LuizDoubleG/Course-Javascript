@@ -46,10 +46,10 @@ console.log(friend);
 
 let siteColor = "blue";
 
-function resetColor(hue, color){ //() <- parameters
-    siteColor = hue + color; // concatenates
+function resetColor(color){ //() <- parameters
+    siteColor = color; //resets value
 }; //function end with ;
 
 console.log(siteColor);
-resetColor("bright"," red"); // only with red -> redundefined
+resetColor("red");
 console.log(siteColor);
