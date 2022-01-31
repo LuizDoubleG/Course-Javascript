@@ -44,12 +44,12 @@ console.log(friend);
 
 //create functions (extructure): Verb + Substantive
 
-let siteColor = "blue";
+let siteColor = "azul";
 
-function resetColor(color){ //() <- parameters
-    siteColor = color; //resets value
+function resetColor(){ //() <- parameters
+    siteColor = ""; //resets value
 }; //function end with ;
 
 console.log(siteColor);
-resetColor("red");
+resetColor();
 console.log(siteColor);
