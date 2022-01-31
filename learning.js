@@ -20,18 +20,36 @@
 // javascript types are dynamic 
 //change
 
+//objects:
+
+/*
 let person = {
     Name: 'Luiz',
     age: 19,
     aprovation: true,
     secondName: 'Miguel'
 };
+*/
 
 //Arrays -> united data acessed by index
 
+/*
 let family = [19,51,'stuff',true,49,9];
 //console.log(family[3]);
 console.log(family.length);
 
 let friend = ['Rafael',19,'Rio de Janeiro'];
 console.log(friend);
+*/
+
+//create functions (extructure): Verb + Substantive
+
+let siteColor = "blue";
+
+function resetColor(hue, color){ //() <- parameters
+    siteColor = hue + color; // concatenates
+}; //function end with ;
+
+console.log(siteColor);
+resetColor("bright"," red"); // only with red -> redundefined
+console.log(siteColor);
