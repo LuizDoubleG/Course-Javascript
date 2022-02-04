@@ -51,7 +51,6 @@ function resetColor(){ //() <- parameters
 }; //function end with ;
 
 console.log(siteColor);
-<<<<<<< HEAD
 resetColor("bright"," red"); // only with red -> redundefined
 console.log(siteColor);
 
@@ -59,22 +58,45 @@ console.log(siteColor);
 //empty functions only prints
 //functions can use return commands
 
-function printName(){
-    console.log('Miguel');
-};
+// function printName(){
+//     console.log('Miguel');
+// };
 
-printName();
+// printName();
 
-function multiplyByTwo(value){
-    return value* 2;
-};
+// function multiplyByTwo(value){
+//     return value* 2;
+// };
 
-console.log(multiplyByTwo(7)); //we used console.log because the function multiplyByTwo doesn't print anything only return values!
+// console.log(multiplyByTwo(7)); //we used console.log because the function multiplyByTwo doesn't print anything only return values!
 
-let result = multiplyByTwo(12);
+// let result = multiplyByTwo(12);
 
-console.log(result);
-=======
-resetColor();
-console.log(siteColor);
->>>>>>> 385e33f281a1f7d1f0819e06947a5ed98610cc9e
+// console.log(result);
+
+// Arithmetic operators
+// + , - , * , / , ** (exponential ex.:2^2)
+// ++ -- (order is important):
+// console.log(age++); = 18
+// console.log(age); = 19
+// console.log(--age); = 18
+
+// Atribution
+// = , += 
+// age += age; = 36
+
+// Comparison
+// return false or true
+// class -> equality
+// sub class-> strict equality:
+console.log (1===2); // false
+console.log (1===1); // only true
+console.log ('1'===1); // false
+// sub class-> loose equality:
+console.log(1==1); // true
+console.log('1' == 1); //true (complex convertion not recommended to use)
+
+
+// Logic
+// Bitwise
+
