@@ -120,5 +120,30 @@ console.log('Can apply for the job: ',canJoinJob);
 let applicantRefused = !canJoinJob;
 console.log('Applicant Refused: ', applicantRefused);
 // Non-boolean comparison 
+/*  Falsy
+    undefined
+    null
+    0
+    false
+    '' (empty string)
+    NaN - not a number (invalid results in mathematical calculations)
+*/
+/* Truthy
+    Not Falsy values
+    false || 'Luiz' -> "Luiz"
+    false || 1 -> 1
+    false || 1 || 3 -> 1 (only first comparison outputs)
+    (outputs first truthy value)
+    example:
+*/
+let customizedColor = 'Red';
+let defaultColor = 'Blue';
+let profileColor = customizedColor || defaultColor; //(defines profileColor by wich truthy value comes first)
+console.log(profileColor); // -> Red
+
+customizedColor = '';
+profileColor = customizedColor || defaultColor;
+console.log(profileColor); // -> Blue
+
 // Bitwise
 
