@@ -104,5 +104,21 @@ let typeClient = score > 100 ? 'premium' : 'common';
 console.log(typeClient);
 
 // Logic
+// and (&&)
+let age = 17;
+let major = age >= 18; 
+let hasWorkCard = true;
+let canJoinJob = major && hasWorkCard;
+console.log(canJoinJob);
+// or (||)
+age = 17;
+major = age >= 18; 
+hasWorkCard = true;
+canJoinJob = major || hasWorkCard;
+console.log('Can apply for the job: ',canJoinJob);
+// Not (!)
+let applicantRefused = !canJoinJob;
+console.log('Applicant Refused: ', applicantRefused);
+// Non-boolean comparison 
 // Bitwise
 
