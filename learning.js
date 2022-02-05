@@ -44,10 +44,10 @@ console.log(friend);
 
 //create functions (extructure): Verb + Substantive
 
-let siteColor = "azul";
+let siteColor = "blue";
 
-function resetColor(){ //() <- parameters
-    siteColor = ""; //resets value
+function resetColor(hue, color){ //() <- parameters
+    siteColor = hue + color; //concatenates
 }; //function end with ;
 
 console.log(siteColor);
@@ -88,14 +88,20 @@ console.log(siteColor);
 // Comparison
 // return false or true
 // class -> equality
+
 // sub class-> strict equality:
-console.log (1===2); // false
+/*console.log (1===2); // false
 console.log (1===1); // only true
 console.log ('1'===1); // false
 // sub class-> loose equality:
 console.log(1==1); // true
 console.log('1' == 1); //true (complex convertion not recommended to use)
+*/
 
+// Ternary operator
+let score = 101;
+let typeClient = score > 100 ? 'premium' : 'common';
+console.log(typeClient);
 
 // Logic
 // Bitwise
