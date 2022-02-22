@@ -373,5 +373,32 @@ function fizzBuzz(input){
     //}
 }
 
+//Math.Floor() -> round down floating numbers
+
+//Speedometer project:
+/* Max speed up to 70km
+   For every 5km over the limit, earns 1 point (penalty)
+   Reaching 12 points -> "suspended license"
+*/
+
+checkSpeed(75);
+
+function checkSpeed(speed){
+    if (speed<35){ //magic value -> hard do comprehend and fix
+        console.log("fined");
+    }
+    if (speed<70){ //magic value
+        console.log("acceptable speed");
+    }
+    else {
+        const penalties = Math.floor((speed-70)/5);
+        if(penalties >= 12)
+            console.log("Suspended driver's licence")
+        else    
+            console.log('Penalties: ', penalties);
+    }
+
+}
+
 
 // Bitwise
