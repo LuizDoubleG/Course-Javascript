@@ -381,23 +381,23 @@ function fizzBuzz(input){
    Reaching 12 points -> "suspended license"
 */
 
-checkSpeed(75);
+checkSpeed(125);
 
 function checkSpeed(speed){
-    if (speed<35){ //magic value -> hard do comprehend and fix
+    const maxSpeed = 70;
+    const minSpeed = 35;
+    const kmForPenaulties = 5;
+    if (speed < minSpeed){ //magic value -> hard do comprehend and fix
         console.log("fined");
     }
-    if (speed<70){ //magic value
+    if (speed < maxSpeed){ //magic value
         console.log("acceptable speed");
     }
     else {
-        const penalties = Math.floor((speed-70)/5);
-        if(penalties >= 12)
-            console.log("Suspended driver's licence")
-        else    
-            console.log('Penalties: ', penalties);
+        const penalties = Math.floor((speed - maxSpeed) / kmForPenaulties);
+        const maxPenalties = 12;
+        penalties >= maxPenalties ? console.log("Driver's licence suspended ") : console.log('Penalties: ', penalties);
     }
-
 }
 
 
