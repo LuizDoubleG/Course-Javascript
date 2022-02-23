@@ -412,4 +412,19 @@ function showType(limit){
     }
 }
 
+const movie = {
+    title : 'The Shack',
+    year : 2017,
+    director : 'Stuart Hazeldine',
+    character : 'Mackenzie'
+}
+showProperties(movie);
+function showProperties(obj){
+    for (let key in obj){
+        if (typeof(obj[key]) === 'string'){
+            console.log(key, obj[key]);
+        }  
+    }
+}
+
 // Bitwise
