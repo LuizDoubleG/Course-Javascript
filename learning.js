@@ -296,6 +296,8 @@ else{
     console.log(m);
 }
 */
+
+//Challenge 1:
 // better:
 let higherNumber = max(5,7); //even equal numbers work
 console.log(higherNumber);
@@ -318,7 +320,9 @@ function max(number1, number2){
     return number1>number2 ? number1:number2;
     //ternary operator
 }
+//End of challenge 1
 
+//Challenge 2:
 // fizzBuzz -> function
 /* 
 compares values and return:
@@ -354,25 +358,29 @@ function fizzBuzz(input){
 
 function fizzBuzz(input){
 //    input%3===0 && input%5===0 ? 'FizzBuzz' : ; doesn't fit in this case
-    if (input instanceof Number){ //important: instanceof structure => https://flexiple.com/instanceof-javascript/#:~:text=Other%20Related%20Concepts-,What%20is%20Instanceof%3F,false%20then%20it%20is%20not. 
+    if (input instanceof Number) //important: instanceof structure => https://flexiple.com/instanceof-javascript/#:~:text=Other%20Related%20Concepts-,What%20is%20Instanceof%3F,false%20then%20it%20is%20not. 
     // or (typeof input !== 'number') more legible 
     // this verification should've been the first one
         return (input);
-    }    
-    if (input%3===0 && input%5===0){
+    
+    if (input%3===0 && input%5===0)
         return ('FizzBuzz');
-    }
-    /*else*/ if (input%3===0){
+    
+    /*else*/ if (input%3===0)
         return ('Fizz');
-    }
-    /*else*/ if (input%5===0){
+    
+    /*else*/ if (input%5===0)
         return('Buzz');
-    }
+    
     //else{
         return ('Not a number');
     //}
+    //The right sequence reduces the need of eleses
+    //because the progam will stop when it returns a value
 }
+//End of challenge 2
 
+//Challenge 3:
 //Math.Floor() -> round down floating numbers
 
 //Speedometer project:
@@ -387,30 +395,36 @@ function checkSpeed(speed){
     const maxSpeed = 70;
     const minSpeed = 35;
     const kmForPenaulties = 5;
-    if (speed < minSpeed){ //magic value -> hard do comprehend and fix
+    if (speed < minSpeed) //magic value -> hard do comprehend and fix
         console.log("fined");
-    }
-    if (speed < maxSpeed){ //magic value
+
+    if (speed < maxSpeed) //magic value
         console.log("acceptable speed");
-    }
-    else {
+    
+    else{
         const penalties = Math.floor((speed - maxSpeed) / kmForPenaulties);
         const maxPenalties = 12;
         penalties >= maxPenalties ? console.log("Driver's licence suspended ") : console.log('Penalties: ', penalties);
     }
 }
+//End of challenge 3
 
-
-//Even or Odd
+//Challenge 4: Even or Odd
 //Recieves a max number of values to evaluate if they are even or odd
 //Iterates over each value
+
 showType(5);
 
 function showType(limit){
-    for(let i = 0; i <= limit; i++){
+    for(let i = 0; i <= limit; i++)
         i % 2 === 0 ? console.log(i, "EVEN") : console.log(i, "ODD");
-    }
 }
+
+//End of challenge 4
+
+//Challenge 5: function that shows object properties 
+//(key and value) 
+//if value matches 'string' type
 
 const movie = {
     title : 'The Shack',
@@ -418,13 +432,26 @@ const movie = {
     director : 'Stuart Hazeldine',
     character : 'Mackenzie'
 }
+
 showProperties(movie);
+
 function showProperties(obj){
-    for (let key in obj){
-        if (typeof(obj[key]) === 'string'){
-            console.log(key, obj[key]);
-        }  
+    for (let prop in obj) //iterates over every propertie in object, like an counter
+        if (typeof(obj[prop]) === 'string') // selects only 'string' type properties
+            console.log(prop, obj[prop]); //show them one at each loop
+}
+
+// End of challenge 5 
+
+//Challenge 6: Multiples of 3 and 5
+
+sum(10);
+function sum(limit){
+    let result = 0;
+    for(let i = 0; i <= limit; i++){
+    i % 3 === 0 ? result += i : i % 5 === 0 ? result += i : null; //usage of null in ternary operations
     }
+    console.log(result);
 }
 
 // Bitwise
