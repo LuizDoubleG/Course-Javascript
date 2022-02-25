@@ -504,17 +504,16 @@ function studentAverage(grades) {
     */
 }
 
-/*
 function calculateAverage(array) {
     var average = array.reduce(function(sumOfGrades, grade){
         return sumOfGrades + grade; 
     },0);
     return average /= array.length
 }
-*/ 
 
 //or
 
+/*
 function calculateAverage(array) {
     var sumOfGrades = 0; //var because it will change its value constantly
     for (var grade of array) {
@@ -522,8 +521,28 @@ function calculateAverage(array) {
     }
 return sumOfGrades/(array.length);
 }
+*/
 
 //We can use F2 to rename all variables with the same name
 
 //End of challenge 7
+
+//Challenge 8
+showAsterisk(10);
+function showAsterisk(lines) {
+ //   let pattern = '';
+//    for(let line = 0; line < lines; line++) {
+//        pattern += '*';
+//        console.log(pattern);
+//    }
+
+    for(let lineCounter = 1; lineCounter <= lines; lineCounter++) {
+        let pattern = '';
+        for(let counter = 0; counter < lineCounter; counter++) {
+            pattern += '*';
+        }
+        //nested loop
+    console.log(pattern);
+    }
+}
 // Bitwise
