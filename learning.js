@@ -527,7 +527,10 @@ return sumOfGrades/(array.length);
 
 //End of challenge 7
 
-//Challenge 8
+//Challenge 8: print number of asterisks in each line
+//Asterisks will increse by 1 for each line in sequence
+//The number of asterisks in a line will match the line number
+
 showAsterisk(10);
 function showAsterisk(lines) {
  //   let pattern = '';
@@ -537,12 +540,71 @@ function showAsterisk(lines) {
 //    }
 
     for(let lineCounter = 1; lineCounter <= lines; lineCounter++) {
-        let pattern = '';
+        let pattern = ''; //resets pattern asterisks to 0
         for(let counter = 0; counter < lineCounter; counter++) {
+            //important not to confund lineCounter with lines
+            //because it will print 10x a line with 10 asterisks
             pattern += '*';
         }
         //nested loop
     console.log(pattern);
     }
 }
+//End of challenge 8
+
+//Challenge 9:
+
+primeNumbers(15);
+
+/*
+function checkPrimeNumber(limit) {
+    for(var number = 2; number <= limit; number++){
+       //Prime numbers starts after 1
+        let primeCheck = true;
+        for(var divisor = 2; divisor < limit; divisor++){
+        //Not "divisor < limit" but "divisor < number"
+        // to reduce cost of operation even if it returns the right outcome
+        //why divisor = 2 and < and not <=?
+        //Because every number is divisible by 1 and itself
+        //But only prime numbers are ONLY divisible by 1 and itself
+        //This feature neutralizes the need for this following operation:
+            
+            //if (number % divisor === 0)
+                //primeCheck++;
+        //}
+    //if (primeCheck === 2)
+    //console.log(number);
+    //}
+    
+        if (number % divisor === 0)
+            primeCheck = false;
+            break;
+        // Don't use braces({}) here, because it will stop 
+        //only the function "if" but not the "for" loop
+        }
+    if (primeCheck) console.log(number);
+    }
+}
+*/
+
+//It's better that a function plays only one role
+
+function primeNumbers(limit) {
+    for(var number = 2; number <= limit; number++){
+       if (checkPrimeNumber(number)) console.log(number);
+    }
+}
+function checkPrimeNumber(number) {
+    for(var divisor = 2; divisor < number; divisor++){
+    //    
+        if (number % divisor === 0)
+           return false;
+    }
+    return true;
+} 
+
+
+
+
+//End of challenge 9
 // Bitwise
