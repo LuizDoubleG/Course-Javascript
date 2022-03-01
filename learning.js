@@ -608,20 +608,23 @@ function checkPrimeNumber(number) {
 //Several objects 
 //ex.:
 //full object with function and specifications:
-// const cellPhone = {
-//     brand : 'SAMSUNG',
-//     screenSize : {
-//         vertical : 155,
-//         horizontal : 75
-//     },
-//     batteryCapacity : 5000,
-//     call : function() {
-//         console.log("Making phone call...")
-//     }
-// }
+
+//const cellPhone = {
+    //brand : 'SAMSUNG',
+    //screenSize : {
+        //vertical : 155,
+        //horizontal : 75
+    //},
+    //batteryCapacity : 5000,
+    //call : function() {
+        //console.log("Making phone call...")
+    //}
+//}
+
 //If we want 100 objects like that, one option is:
 //repeat it 100x
 //instead:
+
 //function createCellPhone() {
 function createCellPhone (brand, screenSize, batteryCapacity) {
     // const cellPhone = {
@@ -636,8 +639,10 @@ function createCellPhone (brand, screenSize, batteryCapacity) {
         //}
     //}
     //return cellPhone;
+
     //(tip: comment all = ctrl + ;)
    //or:
+
     //return {
         //brand : 'SAMSUNG',
         //screenSize : {
@@ -649,10 +654,12 @@ function createCellPhone (brand, screenSize, batteryCapacity) {
             //console.log("Making phone call...")
         //}
     //}
+
     //This is Hard Coding, that means it can't be parameterized
     // it isn't dynamic 
-    // with function createCellPhone(...,...,...) {
+    // but, with function createCellPhone(...,...,...) {
     // and this:
+
     //return {
         //brand : brand,
         //screenSize : screenSize,
@@ -667,13 +674,30 @@ function createCellPhone (brand, screenSize, batteryCapacity) {
         screenSize,
         batteryCapacity,
         call () {
-            console.log("Making phone call...")
+            console.log("Making phone call...");
         }
     }
     // Now it is dynamic and parameterizable
 }
-
+// camelCase -> oneTwoThreeFour
 const cellPhone1 = createCellPhone('Xiaomi', 5.5, 5000);
 console.log(cellPhone1);
+
+
+// Lesson 13: Constructor functions
+// Often used in back-end
+
+//Pascal Case - OneTwoThreeFour 
+function CellPhone (brand, screenSize, batteryCapacity) {
+    this.brand = brand,
+    this.screenSize = screenSize,
+    this.batteryCapacity = batteryCapacity,
+    this.call = function() {
+        console.log("Making phone call...");
+    }
+}
+
+const cellPhone = new CellPhone('ASUS', 5.5,5000);
+console.log(cellPhone);
 
 // Bitwise
