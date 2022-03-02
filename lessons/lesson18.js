@@ -17,15 +17,15 @@ const anotherMessage = `Hi, this is my
 'first'
 message`;
 console.log(anotherMessage);
-const name = 'Luiz'
 
+const name = 'Luiz'
 otherMessage = 'Hi ' + name + '\n Thanks for inviting me';
 console.log(otherMessage);
 
 otherMessage = 
 `Hi ${name} 
 
- Thanks for inviting me
+ Thanks for 'inviting' me
 
  renember that 2+2 = ${2+2}
 
