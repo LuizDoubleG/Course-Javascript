@@ -20,13 +20,13 @@ const address2 = new Address('Rua Gentil Oscar', 'Tatuí', 18272518);
 const {street, ...address3} = address2 // Clone address2 without street propertie
 console.log(address3);
 
-console.log(areAddressEqual(address2,address3)); //false
-console.log(areAddressEqual(address1,address2)); //false
+console.log(arePropertiesEqual(address2,address3)); //false
+console.log(arePropertiesEqual(address1,address2)); //false
 
 const address4 = {...address1};
-console.log(areAddressEqual(address1,address4)); //true
+console.log(arePropertiesEqual(address1,address4)); //true
 
-function areAddressEqual(address1, address2) {
+function arePropertiesEqual(address1, address2) {
     // Compares equality of properties
     let equality = true
     for (let key in address1){
@@ -45,10 +45,10 @@ function hasEqualMemoryAddress(address1, address2) {
     // Compares equality of memory address
     // Value type != Reference type
     // Objects are of Reference type (pointer)
-    return address1 === address2;
+    return address1 === address2; //compares the address the object(pointer) is pointing
 }
 
-console.log(hasEqualMemoryAddress(address2, address4)); //false
+console.log(hasEqualMemoryAddress(address2, address4)); //Different addresses = false
 console.log(hasEqualMemoryAddress(address1, address4)); //false, even though they have equal properties
 
 // However...
