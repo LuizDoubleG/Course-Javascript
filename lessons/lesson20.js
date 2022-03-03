@@ -1,11 +1,6 @@
 // Introduction to Arrays
-// Add new elements
-// Find elements
-// Remove elements
-// Divide arrays
-// Combine arrays
-
 // Adding elements
+
 const numbers = [1,2,3];
 
 // Start
@@ -21,3 +16,5 @@ console.log(numbers); //[0, 3]
 // End
 numbers.push(4);
 console.log(numbers); //[0,3,4]
+
+// It works even if the array is of the const type
